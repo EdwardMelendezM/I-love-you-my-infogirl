@@ -40,7 +40,8 @@ html,body{
   cursor: pointer;
   transition: 0.4s all ;
   &:hover{
-    background-color: aqua;
+    background-color: rgb(35, 155, 173);
+    color: white;
   }
 }
 .container_title_time{
