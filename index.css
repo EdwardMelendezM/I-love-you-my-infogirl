@@ -1,4 +1,48 @@
-html{
+html,body{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: pink;
+  height: 100vh;
+  width: 100vw;
+}
+.container_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container_title_name{
+  font-size: 4em;
+}
+.container_title_question{
+  font-size: 4em;
+}
+.container_title_buttons{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.container_title_buttons_btn{
+  width: 100%;
+  padding: 16px 8px;
+  font-size: 2em;
+  border: 1px solid #111;
+  border-radius: 10px;
+  background-color: transparent;
+  margin: 2px 0px;
+  cursor: pointer;
+  transition: 0.4s all ;
+  &:hover{
+    background-color: aqua;
+  }
+}
+.container_title_time{
+  font-size: 1.3em;
 }
