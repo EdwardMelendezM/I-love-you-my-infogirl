@@ -2,12 +2,15 @@ const d = document;
 const buttonNo = d.querySelector('#button_no')
 const buttonYes = d.querySelector('#button_si')
 const nuevoTexto = ' quieroooo';
-var intervalo;
-var indice = 0;
+const container_success_btn = d.querySelector('#container_success_btn')
+let intervalo;
+let indice = 0;
+
+let container = document.getElementById("container_success");
+
 
 // Button para el NO
 buttonNo.addEventListener('mouseover',e=>{
-  
   clearInterval(intervalo); // Limpiamos cualquier intervalo anterior
   indice = 0; // Reiniciamos el índice
   buttonNo.textContent='Si'
@@ -24,6 +27,19 @@ buttonNo.addEventListener('mouseout',e=>{
   clearInterval(intervalo); // Limpiamos cualquier intervalo activo
   buttonNo.textContent = 'No';
 });
+buttonNo.addEventListener('click',e=>{
+  container.classList.add("fade-in");
+  container.style.display = "flex";
+  
+})
+buttonYes.addEventListener('click', e => {
+  container.classList.add("fade-in");
+  container.style.display = "flex";
+})
+
+container_success_btn.addEventListener('click',e=>{
+  container.classList.remove("fade-in");
+})
 
 // Button para el NO
 // buttonYes.addEventListener('mouseover', e => {
